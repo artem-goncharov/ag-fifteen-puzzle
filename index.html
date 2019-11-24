@@ -1,0 +1,52 @@
+<!Doctype HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="Артём Гончаров">
+	<link rel="stylesheet" href="styles.css" media="all">
+	<script type="text/javascript" src="scripts.js"></script>
+	<title>Тест: Игра в пятнашки</title>
+</head>
+<body>
+
+<div id="wrapper">
+
+	<div id="gameBoard">
+		<div id="A">
+			<div id="A1" class="td"><div class="ghost" id="gh_1" onclick="moveOrNot ('A', 1, 0, 1, 1, 0)"></div></div>
+			<div id="A2" class="td"><div class="ghost" id="gh_2" onclick="moveOrNot ('A', 2, 0, 1, 1, 1)"></div></div>
+			<div id="A3" class="td"><div class="ghost" id="gh_3" onclick="moveOrNot ('A', 3, 0, 1, 1, 1)"></div></div>
+			<div id="A4" class="td"><div class="ghost" id="gh_4" onclick="moveOrNot ('A', 4, 0, 0, 1, 1)"></div></div>
+		</div>
+		<div id="B">
+			<div id="B1" class="td"><div class="ghost" id="gh_5" onclick="moveOrNot ('B', 1, 1, 1, 1, 0)"></div></div>
+			<div id="B2" class="td"><div class="ghost" id="gh_6" onclick="moveOrNot ('B', 2, 1, 1, 1, 1)"></div></div>
+			<div id="B3" class="td"><div class="ghost" id="gh_7" onclick="moveOrNot ('B', 3, 1, 1, 1, 1)"></div></div>
+			<div id="B4" class="td"><div class="ghost" id="gh_8" onclick="moveOrNot ('B', 4, 1, 0, 1, 1)"></div></div>
+		</div>
+		<div id="C">
+			<div id="C1" class="td"><div class="ghost" id="gh_9" onclick="moveOrNot ('C', 1, 1, 1, 1, 0)"></div></div>
+			<div id="C2" class="td"><div class="ghost" id="gh_10" onclick="moveOrNot ('C', 2, 1, 1, 1, 1)"></div></div>
+			<div id="C3" class="td"><div class="ghost" id="gh_11" onclick="moveOrNot ('C', 3, 1, 1, 1, 1)"></div></div>
+			<div id="C4" class="td"><div class="ghost" id="gh_12" onclick="moveOrNot ('C', 4, 1, 0, 1, 1)"></div></div>
+		</div>
+		<div id="D">
+			<div id="D1" class="td"><div class="ghost" id="gh_13" onclick="moveOrNot ('D', 1, 1, 1, 0, 0)"></div></div>
+			<div id="D2" class="td"><div class="ghost" id="gh_14" onclick="moveOrNot ('D', 2, 1, 1, 0, 1)"></div></div>
+			<div id="D3" class="td"><div class="ghost" id="gh_15" onclick="moveOrNot ('D', 3, 1, 1, 0, 1)"></div></div>
+			<div id="D4" class="td"><div class="ghost" id="gh_16" onclick="moveOrNot ('D', 4, 1, 0, 0, 1)"></div></div>
+		</div>
+	</div>
+	<br />
+	<div><p style="float: left;">Количество перемещений: &nbsp;&nbsp;</p></div><div><input type="text" id="movements" value="0"/></div>
+	<br />
+	<div><input type="button" value="Начать новую игру в пятнашки" id="restart" onclick="startGame (0); clearCounter()"/></div>
+
+</div>
+
+<script>
+	window.onload = startGame (0);
+</script>
+
+</body>
+</html>
